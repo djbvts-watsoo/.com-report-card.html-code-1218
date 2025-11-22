@@ -567,17 +567,18 @@
         "generationTime": "2025-10-26T14:30:00.000Z",
         "generatedBy": "AdminUser",
         "uniqueId": "Report_123",
-        "totalTrips": 300,
+        "totalTrips": 283,
         "totalVehicleReports": 1,
-        "totalDistance": 2876,
+        "totalDistance": 2636.33,
+	"totalEngineHr": 0,
         "fromDate": "2025-10-01T00:00:00.000Z",
         "toDate": "2025-10-31T00:00:00.000Z",
         "vehicleReports": [ {
           "area": "JanakPuriMS",
           "vehicleNumber": "DL1LAC1218",
           "tankerType": "MS_HIRED",
-          "totalDistance": 2876,
-          "totalTrips": 300,
+          "totalDistance": 2636.33,
+          "totalTrips": 283,
           "vehicleRecalculateCount": 0 // Set to 0 to show "N/A"
         }]
       };
@@ -657,6 +658,10 @@
           <div class="stat-value">${parseFloat(data.totalDistance || 0).toFixed(2)}km</div>
           <div class="stat-label">Total Distance</div>
         </div>
+	<div class="stat-block">
+          <div class="stat-value">${data.totalEngineHr || 0}</div>
+          <div class="stat-label">Total Engine Hr</div>
+        </div>
       </div>
       <div class="table-container">
         <table>
@@ -731,5 +736,4 @@
     });
   </script>
 </body>
-
 </html>
